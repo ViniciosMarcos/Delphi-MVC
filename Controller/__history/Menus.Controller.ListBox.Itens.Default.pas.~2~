@@ -1,0 +1,16 @@
+unit Menus.Controller.ListBox.Itens.Default;
+
+interface
+
+uses
+  Menus.Controller.Interfaces;
+
+type
+
+  TControllerListBoxItensDefault = class(TInterfacedObject, IControllerListBoxItensDefault)
+
+  end;
+
+implementation
+
+end.

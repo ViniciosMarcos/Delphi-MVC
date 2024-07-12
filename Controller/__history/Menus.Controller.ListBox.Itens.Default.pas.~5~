@@ -1,0 +1,42 @@
+unit Menus.Controller.ListBox.Itens.Default;
+
+interface
+
+uses
+  Menus.Controller.Interfaces,
+  FMX.ListBox;
+
+type
+
+  TControllerListBoxItensDefault = class(TInterfacedObject,
+    IControllerListBoxItensDefault)
+  private
+    FListBoxItem : TListBoxItem;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: IControllerListBoxItensDefault;
+  end;
+
+implementation
+
+{ TControllerListBoxItensDefault }
+
+constructor TControllerListBoxItensDefault.Create;
+begin
+
+end;
+
+destructor TControllerListBoxItensDefault.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerListBoxItensDefault.New
+  : IControllerListBoxItensDefault;
+begin
+  Result := Self.Create;
+end;
+
+end.
