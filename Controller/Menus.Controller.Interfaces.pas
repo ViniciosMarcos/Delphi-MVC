@@ -9,6 +9,11 @@ type
   IControllerListBoxItensDefault = interface;
   IControllerListBoxDefault = interface;
 
+  IControllerListBoxItemForm = interface
+    ['{EE2102B7-4330-4F36-AC0F-F2F164D5FB54}']
+    function Show: TFmxObject;
+  end;
+
   IControllerListBoxItensFactory = interface
     ['{C280E6FA-451D-4C3A-94E2-42D4E3A2B4EF}']
     function Default: IControllerListBoxItensDefault;

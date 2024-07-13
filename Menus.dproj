@@ -135,6 +135,7 @@
         <DCCReference Include="Controller\Menus.Controller.ListBox.Factory.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Default.pas"/>
         <DCCReference Include="Controller\Menus.Controller.ListBox.Default.pas"/>
+        <DCCReference Include="Controller\Menus.Controller.ListBox.Itens.Produtos.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
