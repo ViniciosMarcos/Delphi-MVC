@@ -40,6 +40,7 @@ begin
   TControllerListBoxFactory.New
     .Default(FContainer)
     .AddItem(TControllerListBoxItensFactory.New.Produto.Show)
+    .AddItem(TControllerListBoxItensFactory.New.Cliente.Show)
     .Exibir;
 end;
 

@@ -13,11 +13,19 @@ type
     class function New: IControllerListBoxItensFactory;
     function Default: IControllerListBoxItensDefault;
     function Produto: IControllerListBoxItemForm;
+    function Cliente: IControllerListBoxItemForm;
   end;
 
 implementation
 
 { TControllerListBoxItensFactory }
+
+uses Menus.Controller.ListBox.Itens.Clientes;
+
+function TControllerListBoxItensFactory.Cliente: IControllerListBoxItemForm;
+begin
+  Result := TControllerListBoxItensCliente.New;
+end;
 
 constructor TControllerListBoxItensFactory.Create;
 begin

@@ -16,12 +16,14 @@ type
 
   IControllerListBoxMenu = interface
     ['{8FE93FB9-1F58-495D-A95C-62B230505C1A}']
+    procedure Exibir;
   end;
 
   IControllerListBoxItensFactory = interface
     ['{C280E6FA-451D-4C3A-94E2-42D4E3A2B4EF}']
     function Default: IControllerListBoxItensDefault;
     function Produto: IControllerListBoxItemForm;
+    function Cliente: IControllerListBoxItemForm;
   end;
 
   IControllerListBoxFactory = interface
