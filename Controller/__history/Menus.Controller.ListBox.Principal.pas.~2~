@@ -1,0 +1,15 @@
+unit Menus.Controller.ListBox.Principal;
+
+interface
+
+uses
+  Menus.Controller.Interfaces;
+
+type
+  TControllerListBoxPrincipal = class(TInterfacedObject, IControllerListBoxMenu)
+
+  end;
+
+implementation
+
+end.

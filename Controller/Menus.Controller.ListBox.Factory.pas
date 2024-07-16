@@ -4,7 +4,7 @@ interface
 
 uses
   Menus.Controller.Interfaces, Menus.Controller.ListBox.Default,
-  System.Classes;
+  System.Classes, Menus.Controller.ListBox.Principal;
 
 type
 
@@ -13,6 +13,7 @@ type
     destructor Destroy; override;
     class function New: IControllerListBoxFactory;
     function Default(Container: TComponent): IControllerListBoxDefault;
+    function Principal(Container: TComponent): IControllerListBoxMenu;
   end;
 
 implementation
@@ -39,6 +40,12 @@ end;
 class function TControllerListBoxFactory.New: IControllerListBoxFactory;
 begin
   Result := Self.Create;
+end;
+
+function TControllerListBoxFactory.Principal(
+  Container: TComponent): IControllerListBoxMenu;
+begin
+  Result := TControllerListBoxPrincipal.New(Container);
 end;
 
 end.

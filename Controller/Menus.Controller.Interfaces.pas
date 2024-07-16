@@ -14,14 +14,20 @@ type
     function Show: TFmxObject;
   end;
 
+  IControllerListBoxMenu = interface
+    ['{8FE93FB9-1F58-495D-A95C-62B230505C1A}']
+  end;
+
   IControllerListBoxItensFactory = interface
     ['{C280E6FA-451D-4C3A-94E2-42D4E3A2B4EF}']
     function Default: IControllerListBoxItensDefault;
+    function Produto: IControllerListBoxItemForm;
   end;
 
   IControllerListBoxFactory = interface
     ['{D8E51F00-C55D-4295-AA70-1221DB7FCC0C}']
     function Default(Container: TComponent): IControllerListBoxDefault;
+    function Principal(Container: TComponent): IControllerListBoxMenu;
   end;
 
   IControllerListBoxItensDefault = interface
@@ -40,6 +46,7 @@ type
     function ItemHeight(Value: Integer): IControllerListBoxDefault;
     function AddItem(Value: TFmxObject): IControllerListBoxDefault;
     function Lista: TFmxObject;
+    procedure Exibir;
   end;
 
 implementation
